@@ -19,16 +19,16 @@
                 <h6 class="d-flex justify-content-center text-secondary mb-4">Survey Form</h6>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="fullname" onkeypress="return testname(event)" placeholder="Full Name..."><span></span>
+                <input type="text" class="form-control item" id="fullname" placeholder="Full Name..." onkeyup="validateName()" onkeydown="return testname(event)"><span></span>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control item" id="address" placeholder="Address..."><span></span>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="email" placeholder="Email id..."><span></span>
+                <input type="text" class="form-control item" id="email" placeholder="Email id..." onkeyup="validateEmail()"><span></span>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control item" id="password" placeholder="Password..."><span></span>
+                <input type="password" class="form-control item" id="password" placeholder="Password..." onkeyup="validatePassword()"><span id="strengthDisplay"></span>
             </div>
             <div class="form-group">
                 <label for="about-campus">What do you like about Campus?</label>
@@ -55,7 +55,7 @@
                 <textarea name="comments" id="comments" cols="30" rows="3" class="form-control item" placeholder="Your feedback..."></textarea> <span></span>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-success btn-block submit" onclick="validate()">Submit</button>
+                <button type="submit" class="btn btn-success btn-block submit" onclick="validate(); return false;">Submit</button>
                 <button type="submit" class="btn btn-danger btn-block reset">Reset</button>
             </div>
         </form>
