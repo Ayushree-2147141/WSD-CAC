@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="registration-form">
+        <form onsubmit="return validate()">
+            <div>
+                <h2 class="d-flex justify-content-center">Christ University</h2>
+            </div>
+            <div>
+                <h6 class="d-flex justify-content-center text-secondary mb-4">Survey Form</h6>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="fullname" onkeypress="return testname(event)" placeholder="Full Name..."><span></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="address" placeholder="Address..."><span></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" placeholder="Email id..."><span></span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control item" id="password" placeholder="Password..."><span></span>
+            </div>
+            <div class="form-group">
+                <label for="about-campus">What do you like about Campus?</label>
+                <ul id="about-campus" class="form-control item">
+                    <li><input type="checkbox" name="camp">&nbsp;Student</li> 
+                    <li><input type="checkbox" name="camp">&nbsp;Location</li>
+                    <li><input type="checkbox" name="camp">&nbsp;Campus</li>
+                    <li><input type="checkbox" name="camp">&nbsp;Atmosphere</li>
+                    <li><input type="checkbox" name="camp">&nbsp;Dorm Room</li>
+                    <li><input type="checkbox" name="camp">&nbsp;Sport</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="interest">How you became interested in the University?</label>
+                <ul id="interest" class="form-control item">
+                    <li><input type="radio" name="iu">&nbsp;Friends</li>
+                    <li><input type="radio" name="iu">&nbsp;Television</li>
+                    <li><input type="radio" name="iu">&nbsp;Internet</li>
+                    <li><input type="radio" name="iu">&nbsp;Others</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments: </label> <br>
+                <textarea name="comments" id="comments" cols="30" rows="3" class="form-control item" placeholder="Your feedback..."></textarea> <span></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block submit" onclick="validate()">Submit</button>
+                <button type="submit" class="btn btn-danger btn-block reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
